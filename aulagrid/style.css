@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+aside{
+    text-align: center;
+}
+
+.fa-microchip{
+    color: rgb(52,200,200);
+    font-size: 6rem;
+    padding: 2rem;
+}
+
+.page-content h1{
+    font-size:5.6rem;
+    text-align: center;
+}
+.page-content h1 p + p {
+    color:rgb(52, 200, 200);
+    text-align: center;
+}
+
+.input-group{
+    size:200rem;
+    font-size: large;
+}
+input, button{
+    width: 50%;
+    margin: 0.3rem;
+    padding:0.2em;
+    border: 1px solid rgb(52,200,200);
+    border-radius: 4px;
+}
+input:focus{
+    box-shadow: 0 0 0 0.2rem rgb(52, 200, 200);
+    outline: none;
+}
+footer{
+    background-color: rgb(52, 200, 200);
+    padding:1rem;
+
+}
+footer ul{
+    display:flex;
+    justify-content: left;
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+footer ul li{
+    margin: 0 1rem;
+}
+footer a{
+    color:aliceblue;
+    text-align: justify;
+   /*  margin:0.2rem;
+    padding:0.1rem; */
+    text-decoration: none;
+
+}
+
+.page-content{
+    height: 100vh;
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr) auto; */
+    grid-template-areas:
+        ". . . . ."
+        ". title login . ."
+        ". title login . ."
+        ". title login . ."
+        "footer footer footer footer footer";
+}
+
+main{
+    grid-area:title;
+}
+aside{
+    grid-area:login;
+}
+footer{
+    grid-area:footer;
+}
+
+@media screen and (min-width: 1024px){
+    .page-content{
+        gap:5rem 0;
+         /* grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr) auto; */
+        grid-template-areas:
+        ". . . . ."
+       ". title login login ."
+        ". title login login ."
+        ". title login login ."
+        ". . . . ."
+        "footer footer footer footer footer";
+ }
+}

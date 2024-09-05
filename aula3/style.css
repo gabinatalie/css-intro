@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font: size 50%;
+}
+h2,h3,h4,h5{
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+
+}
+h1 {
+  font-size: 50%
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+  color:rgb(3, 26, 46)
+    }
+
+a {
+    background-color: steelblue;
+    color: #fff;
+    border: none;
+    padding:0.6rem 2.4rem;
+    font-size: 2.8rem;    
+    cursor: pointer;
+    width: 100%;
+    display:block;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+    text-decoration: center;
+    margin:auto;
+    width: 80%;
+    text-align: center;
+    /* display:none; - some com o item e o espaço que ele ocupava*/
+    /* visibility: hidden; - some com o item porém fica o espaço que ele ocupava em branco */
+    /* opacity:0 ; */ /* varia de 0 a 1 (0 transparente, 1 totalmente opaco */
+   /* com opacity o botão some mas continua dando pra clicar, no visibility ele some completamente */
+}
+[data-anchor="products"]:hover{
+    background-color: beige;
+    color:#899fa9;
+    transform: scale(1.2);
+    
+}
+
+[data-anchor="team"]{
+    margin-top: 2rem;
+    animation: pulse 1.5s infinite;
+    /* animation-fill-mode: forwards; */
+    animation-direction: alternate;
+    transform: scale(1);
+}
+
+@keyframes pulse {
+    0%{ 
+        transform: scale(1);
+        opacity:1;
+    }
+    50%{
+        transform: scale(1.35);
+        opacity: .6;
+    }
+    100%{
+        transform: scale(1);
+        opacity:1;
+}
+}
+
+.fa-spinner{
+    margin-top: 3rem;
+    margin: 4rem;
+    font: 10rem;
+    color:blueviolet;
+    animation: load 2s infinite;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+
+@keyframes load {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {transform: rotateZ(180deg)}
+
+    100%{
+        transform: rotateZ(360deg)
+    }
+
+    }
+
+    .bg {
+  height: 20vh;
+  width: 100%;
+  background-color:#899fa9 ;
+  background-image:url('https://images.unsplash.com/photo-1648483424607-f8da5be54b72?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+/*   background-attachment: fixed;
+        */
+    }
+    table, td, th {
+  border: 1px solid red
+}
+
+/* 
+#companies-table{
+    display:none;
+} */
+/* consigo mexer usando o id com # antes do id */
+
+table tr:first-child {
+  background-color: rgb(235, 186, 50);
+  color:#fff
+}
+
+table tr:nth-child(2n + 3) {
+  background-color: #aaa
+}
+
+table {
+  font-size: 2rem;
+  text-align: center;
+  border-collapse: separate;
+}
+
+ul {
+  padding-left: 2.4rem;
+  list-style:circle
+}
+ol{
+  padding-left: 3.4rem;
+  list-style:upper-roman
+}
+[data-company="GCO"]{
+    background-color: yellow;
+}
+/* poderia ser sem o valor "GCO", ai pegaria todos que tem esse atributo */
+
+@media screen and (min-width: 1000px){
+    .bg{
+        height: 50vh;
+    }
+/* pode definir tamanho por tipo de screen(tablet, desktop, cel */
+}
+@media print {
+    .bg {
+        display:none;
+        /* tira a imagem na hora de imprimir */
+    }
+}

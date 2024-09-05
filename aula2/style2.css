@@ -1,0 +1,38 @@
+/* ESSA É DA AULA DE GRID */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+.box, p, button {
+    font-size: 4rem;
+    
+}
+.box{
+    min-width: 10rem;
+    min-height: 10rem;
+    padding: 1.5rem;
+    border: 10px solid purple;
+    border-radius: 0.4rem;
+    background-color: rgb(98, 201, 201, 0.5);
+    color: white;
+    font-size: 4rem;
+    order:10;
+}
+.boxes{
+    height: calc(100vh);
+    position: relative;
+    display:grid;
+    gap: 2rem 5rem;
+    justify-content:center;
+   /*  grid-template-columns:1fr  1fr 3fr; */
+   grid-template-columns: repeat(2, 1fr) 3fr;
+    grid-template-rows: minmax(300px, 1fr) 1fr 2fr;
+    /* paddin influencia o tamanho das caixas */
+
+}
