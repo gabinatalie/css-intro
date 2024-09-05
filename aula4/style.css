@@ -1,0 +1,63 @@
+.title {
+   font-size: 50px;
+   font-weight: 700; 
+   border:solid red;
+}
+
+section#principais-estilos {
+    background-color: black;
+    color: whitesmoke;
+    border: solid blue;
+    padding: 50px;
+    margin: 20px 40px;
+    border-radius: 10px;
+}
+
+#principais-estilos .paragrafo {
+    font-size: 22px;
+    color: yellow;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: solid green;
+}
+
+#flexbox .container {
+    display: flex;
+    gap:20px;
+    border: solid ;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+#flexbox .container .box {
+    width: 200px;   
+    height: 200px;
+    background-color: aqua;
+    border: solid orangered;
+    
+}
+
+#flexbox .container .box2 {
+    width: 200px;   
+    height: 400px;
+    background-color: purple;
+   
+}
+
+section#grid-layout {
+    margin-top: 10px;
+}
+
+#grid-layout .container-grid {
+    display: grid;
+    grid: 40px 80px 1fr;
+
+    gap: 20px;
+
+}
+
+#grid-layout .container-grid .caixa {
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+
+}
